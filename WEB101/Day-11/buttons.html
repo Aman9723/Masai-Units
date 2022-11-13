@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: transparent;
+            border-radius: 7px;
+        }
+
+        div {
+            margin: auto;
+            text-align: center;
+            width: 85%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var btnArr = [
+            { name: "Primary", color: "white", bgColor: "blue" },
+            { name: "Secondary", color: "white", bgColor: "grey" },
+            { name: "Danger", color: "white", bgColor: "red" },
+            { name: "Warning", color: "black", bgColor: "yellow" },
+            { name: "Info", color: "white", bgColor: "cyan" },
+            { name: "Light", color: "black", bgColor: "white" },
+            { name: "Success", color: "white", bgColor: "green" },
+            { name: "Dark", color: "white", bgColor: "black" },
+            { name: "Link", color: "blue", bgColor: "white" },
+            { name: "Dark Pink", color: "blue", bgColor: "pink" },
+        ];
+
+        let box = document.createElement('div');
+        document.querySelector('body').append(box);
+
+        btnArr.forEach(elm => {
+            let head = document.createElement('button');
+            head.innerText = elm.name;
+            head.style.color = elm.color;
+            head.style.backgroundColor = elm.bgColor;
+            document.querySelector('div').append(head);
+        });
+
+    </script>
+</body>
+
+</html>

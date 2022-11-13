@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        /* 1. justify-Content -> main axis */
+        /* 2. align-items -> cross axis  */
+        .flex-container{
+            display: flex;
+            border: 3px solid black;
+            /* How to center a div in vertical manner  */
+            align-items:center;
+            /* Default  */
+            /* Stretches the items to the height of the container  */
+            /* Default  */
+            height: 150px;
+        }
+        .flex-container>div{
+            width: 100px;
+            height: 100px;
+        }
+        .flex-container>div:nth-child(2n){
+            background-color: teal;
+        }
+        .flex-container>div:nth-child(2n+1){
+            background-color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div id="length">2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

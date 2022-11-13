@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        localStorage.setItem("movie", "avengers");
+        localStorage.setItem("hero", "tony stark");
+        localStorage.setItem('rating', '10');
+        localStorage.clear();
+        let nums = [1, 2, 3, 4];
+
+        // local storage will only accept strings
+        nums = JSON.stringify(nums);
+        localStorage.setItem("array", nums);
+
+        // or 
+        // localStorage.setItem('array',JSON.stringify(nums));
+        let output = localStorage.getItem('array');
+        console.log(JSON.parse(output)[0]);
+
+    </script>
+</body>
+
+</html>

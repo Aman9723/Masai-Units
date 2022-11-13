@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > p:nth-last-child(){
+            background-color: teal;
+        }
+        p::first-letter{
+            font-size: 40px;
+        }
+        p::before, p::after{
+            content: "😂";
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod obcaecati ipsa, beatae alias animi ratione possimus, nam quibusdam ut voluptas tempore modi optio unde.</p>
+</body>
+</html>

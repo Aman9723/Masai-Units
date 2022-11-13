@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* Priority of selectors - SICTU
+
+        s - in-line style - 1000 points
+        i - id selector - 100 points
+        c - class selector - 10 points
+        t - tag selector - 1 points
+        u - universal selector - 0 points*/ 
+
+        /* tag selector  */
+        h1{
+            color: blue;
+        }
+
+        /* universal selector */
+        *{
+            color: red;
+        }
+        
+        /* class selector */
+        .masai{
+            color: yellow;
+        }
+
+        /* id selector */
+        #school{
+            color: teal;
+        }
+
+        #school{
+            color: pink;
+        }
+
+        /* Whenever scores are equal, it will select properties which is at the bottom */
+        
+
+    </style>
+</head>
+<body>
+    <h1 class="masai" id="school">Masai School</h1>
+</body>
+</html>

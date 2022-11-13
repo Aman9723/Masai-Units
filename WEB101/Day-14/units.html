@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            /* 1 rem = 100% of font-size of html */
+            font-size: 2rem;
+        }
+
+        div {
+            font-size: 20px;
+        }
+
+        div>span {
+            /* 1 em = 100% of font-size of parent */
+            font-size: 2em;
+        }
+
+        .viewport-30 {
+            background-color: aqua;
+            /* 100vw = 100% of the viewport width */
+            width: 100%;
+            /* 100vh = 100% of the viewport height */
+            height: 10vh;
+        }
+        .main{
+            height: 90vh;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html by default has 16px value  -->
+
+    <!-- <div>
+        <p>Hello World</p>
+        <span>Hello World from EM</span>
+    </div> -->
+
+    <div class="main">
+        <footer>
+            <h1><footer></footer></h1>
+        </footer>
+    </div>
+    <div class="viewport-30">
+
+    </div>
+</body>
+
+</html>
+
+<!-- Units 
+1. px
+2. %
+3. fr 
+4. em 
+5. rem 
+6. vw - viewport width
+7. vh - viewport height 
+-->

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 3px solid black;
+            flex-wrap: nowrap;
+            /*  wrap , nowrap(Default) , wrap-reverse  */
+        }
+        .flex-container>div{
+            width: 100px;
+            height: 100px;
+        }
+        .flex-container>div:nth-child(2n){
+            background-color: teal;
+        }
+        .flex-container>div:nth-child(2n+1){
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

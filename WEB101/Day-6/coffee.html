@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(237, 237, 229);
+        }
+        #container{
+            display: grid;
+            width: 85%;
+            margin: auto;
+            margin-top: 5%;
+            /* border: 3px solid red; */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,auto);
+            gap: 20px;
+        }
+        #container > div{
+            padding: 0% 5%;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+        }
+        #container > div > div{
+            display: flex;
+            justify-content: space-between;
+        }
+        #container > div > div > p + p{
+            color: goldenrod;
+            font-weight: bolder;
+            font-size: large;
+        }
+        #container > div > div > p{
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        @media all and (min-width: 481px) and (max-width:768px){
+            #container{
+                grid-template-columns: repeat(2,1fr);
+                width: 90%;
+            }
+        }
+        @media all and (min-width: 320px) and (max-width:480px){
+            #container{
+                grid-template-columns: repeat(1,1fr);
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+        <div>
+            <div>
+                <p>Cappucino</p>
+                <p>49$</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et facilis labore nam maxime voluptatibus! Pariatur?</p>
+        </div>
+    </div>
+</body>
+</html>

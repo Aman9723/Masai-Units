@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text" placeholder="Enter Name">
+    <button onclick="getValues()">Submit</button>
+    <h1 id="display"></h1>
+    <select id="role">
+        <option value="FSD">FSD</option>
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+    </select>
+    <script>
+        function getValues(){
+            let enteredName = document.getElementById('name').value;
+            document.getElementById('display').innerText = enteredName;
+            let selectedRole = document.getElementById('role').value;
+            console.log(selectedRole);
+        }
+    </script>
+</body>
+</html>

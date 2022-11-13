@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        #container img{
+            width: 50%;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Store</h1>
+    <button onclick="sortLH()">sort LH</button>
+    <button onclick="sortHL()">sort HL</button>
+    Filter: <input type="text" oninput="filter()" id="query">
+    <div id="container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

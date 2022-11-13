@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body>h1 {
+            text-align: center;
+            color: teal;
+        }
+
+        body>div {
+            border: 1px solid white;
+            width: 28%;
+            height: auto;
+            margin: auto;
+            padding-bottom: 4%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        body>div>#input {
+            height: 50px;
+            width: 80%;
+            margin: auto;
+            margin-top: 10%;
+            margin-bottom: 8%;
+            border-radius: 7px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        body>div>.wrapper>div {
+            width: 23%;
+            height: 100%;
+            margin: auto;
+        }
+
+        body>div>.wrapper {
+            width: 80%;
+            height: 50px;
+            margin: auto;
+            margin-top: 5%;
+            display: flex;
+        }
+
+        body>div>.wrapper>div {
+            border-radius: 10%;
+            height: 100%;
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        div>.wrapper:nth-child(5)>div:nth-child(1) {
+            background-color: red;
+        }
+
+        div>.wrapper>div:last-child {
+            background-color: black;
+            color: white;
+        }
+
+        div>.wrapper:last-child>div:nth-child(3) {
+            background-color: black;
+            color: white;
+        }
+        h3{
+            margin-top: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Masai Calculator</h1>
+    <div>
+        <div id="input"></div>
+        <div class="wrapper">
+            <div>
+                <h3>1</h3>
+            </div>
+            <div>
+                <h3>2</h3>
+            </div>
+            <div>
+                <h3>3</h3>
+            </div>
+            <div>
+                <h3>+</h3>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div>
+                <h3>4</h3>
+            </div>
+            <div>
+                <h3>5</h3>
+            </div>
+            <div>
+                <h3>6</h3>
+            </div>
+            <div>
+                <h3>-</h3>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div>
+                <h3>7</h3>
+            </div>
+            <div>
+                <h3>8</h3>
+            </div>
+            <div>
+                <h3>9</h3>
+            </div>
+            <div>
+                <h3>x</h3>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div>
+                <h3>c</h3>
+            </div>
+            <div>
+                <h3>0</h3>
+            </div>
+            <div>
+                <h3>=</h3>
+            </div>
+            <div>
+                <h3>/</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

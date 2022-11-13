@@ -1,0 +1,7 @@
+{
+  "posts": [
+    { "id": 1, "message": "Hello abcde" },
+    { "id": 2, "message": "Hello fghij" },
+    { "id": 3, "message": "hello world" }
+  ]
+}

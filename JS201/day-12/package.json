@@ -1,0 +1,14 @@
+{
+  "name": "day-13",
+  "version": "1.0.0",
+  "description": "testing with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "aman",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
