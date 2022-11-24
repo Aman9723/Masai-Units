@@ -9,6 +9,9 @@ const UserSchema = new mongoose.Schema(
         },
         password: String,
         age: Number,
+        location: String,
+        gender: String,
+        dob: Date,
     },
     {
         versionKey: false,
