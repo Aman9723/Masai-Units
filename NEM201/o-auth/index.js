@@ -14,43 +14,38 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/github/callback', async (req, res) => {
-    const { code } = req.query;
-    console.log('Github code: ' + code);
-
     // const userData = fetch('whatever.github.com/api?code=Githubcode')
     // const user = await UserModel.create({ ...userData });
+    try {
+        // github sends a code valid for 10mins
+        const { code } = req.query;
 
-    const { accessToken } = await fetch(
-        'https://github.com/login/oauth/access_token',
-        {
-            method: 'POST',
-            headers: {
-                accept: 'application/json',
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify({
-                client_id: CLIENT_ID,
-                client_secret: CLIENT_SECRET,
-                code,
-            }),
-        }
-    )
-        .then((e) => e.json())
-        .catch(console.error);
+        // request accessToken from github
+        let data = await fetch(
+            `https://github.com/login/oauth/access_token?client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}&code=${code}`,
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+            }
+        );
+        data = await data.json();
+        const { access_token } = data;
 
-    console.log('Access', accessToken);
+        // request user details from github
+        let userDetails = await fetch(`https://api.github.com/user`, {
+            headers: { Authorization: `Bearer ${access_token}` },
+        });
+        userDetails = await userDetails.json();
 
-    const userDetails = await fetch('https://github.com/user', {
-        headers: {
-            Authorization: `Bearer ${accessToken}`,
-        },
-    })
-        .then((x) => x.json())
-        .catch(console.error);
-
-    console.log(userDetails);
-
-    return res.send('sign in with github success');
+        return res.status(202).send('Sign in with github success');
+    } catch (e) {
+        return res.status(400).send(e.message);
+    }
+    // store details in db
+    // have fields "loogedIn: true"
 });
 
 app.listen(8080, () => {
