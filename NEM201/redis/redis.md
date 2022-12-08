@@ -61,3 +61,6 @@ const user1 = {
 - HGETALL user1
 
 > ioredis package to use redis
+
+## Command to start redis:
+rdcli -h `endpoint before colon` --port 11186 --auth `password`
