@@ -1,0 +1,14 @@
+Relative:
+1. Element gets removed from the document flow and its space is reserved.
+
+Absolute:
+1. Removes the element completely from the document flow.
+2. Will become absolute to parent if parent has position relative, absolute, fixed or sticky.
+
+Fixed:
+1. Position is based on entire html element and not on parent.
+2. Remain at the same place when you scroll.
+
+Sticky:
+1. Combination of fixed and relative.
+2. When scrolled outside of page behaves like fixed.
