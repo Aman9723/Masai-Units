@@ -34,7 +34,11 @@ app.use(authMiddleware);
 
 app.get('/', async (req, res) => {
     try {
-        let carts = await Cart.find({ user: req.userId }).populate(['product']);
+        // populate({
+        //     path: 'author',
+        //     select: 'name email role',
+        // });
+        let carts = await Cart.find({ user: req.userId }).populate(['product']); // key product written in schema
         res.send(carts);
     } catch (e) {
         res.status(400).send(e.message);
